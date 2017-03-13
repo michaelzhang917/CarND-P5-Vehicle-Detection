@@ -285,6 +285,9 @@ for i in [1,4,5,6]:
 
 ![png](output_13_0.png)
 
+####2. Some discussion is given around how you improved the reliability of the classifier i.e., fewer false positives and more reliable car detections (this could be things like choice of feature vector, thresholding the decision function, hard negative mining etc.)
+
+I have tried use only one HOG channel and other color space like HSV, RGB and Grey before I finally using YCrCb 3-channel HOG features plus spatially binned color and histograms of color in the feature vector which giving me most reliable car detection. In addition, I used the three different scale of the window size and tried different threshold value to reduce the false positive detection. Finally, I used the scale = [1 ,1.5 , 2] of base window size = 64 and threshold = 9 for a single frame car detetion. In addition, I removed the detection box which is less than 400 pixels.
 
 ### Video Implementation
 
